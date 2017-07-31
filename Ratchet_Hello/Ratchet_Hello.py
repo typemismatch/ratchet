@@ -17,6 +17,6 @@ def Ratchet_Hello_handler(event, context):
     logger.info(json.dumps(event))
 
     # Let's publish a response back to AWS IoT
-    client.publish(topic = "/ratchet-cloud", payload ="Hello from our Greengrass Device!")
+    client.publish(topic = "/ratchet-cloud", payload = json.dumps(event))
 
     return True
