@@ -12,7 +12,7 @@ logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 
 client = greengrasssdk.client('iot-data')
 
-def Ratchet_Hello(event, context):
+def Ratchet_Hello_handler(event, context):
     logger.info("Ratchet Lambda is ONLINE")
     logger.info(json.dumps(event))
 
