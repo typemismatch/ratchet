@@ -18,7 +18,7 @@ def Ratchet_ButtonPress_handler(event, context):
 
     # Let's publish a response back to AWS IoT
     # Only send a message if the button state is 1
-    if (event > 0):
+    if (event.key == 'ENTER' and event.state > 0):
         client.publish(topic = "/ratchet-lcd", payload = "Button Pressed")
 
     return True
